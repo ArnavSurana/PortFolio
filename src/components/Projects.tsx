@@ -30,7 +30,7 @@ const Projects = () => {
       title: 'ScholarBridge - RAG System',
       description: 'A full-stack website implementing Retrieval-Augmented Generation (RAG) system for querying PDF books using natural language. Features Appwrite authentication, vector embeddings for semantic search, and LLM capabilities.',
       tech: ['Appwrite', 'PineCone', 'Python', 'React', 'JavaScript'],
-      github: '#',
+      github: 'https://github.com/ArnavSurana/ScholarBridge',
       live: '#',
       year: '2025',
       featured: true
@@ -39,7 +39,7 @@ const Projects = () => {
       title: 'Smart India Hackathon - SLIFTEX',
       description: 'Frontend website for AI/ML model (PS-1782) to detect similarities between newspaper titles. Integrated LangChain for NLP-based similarity detection and won 1st place at SIH 2024.',
       tech: ['React', 'LangChain', 'Vite', 'FastAPI', 'MongoDB'],
-      github: '#',
+      github: 'https://github.com/ArnavSurana/SIH1782',
       live: '#',
       year: 'Dec 2024',
       featured: true
@@ -48,17 +48,9 @@ const Projects = () => {
       title: 'Crop Disease Detection Platform',
       description: 'MERN Stack website with AI/ML backend for crop disease detection. Features LangChain integration for image and symptom analysis, WebSocket communication for real-time updates.',
       tech: ['MongoDB', 'Express.js', 'React', 'Node.js', 'WebSockets'],
-      github: '#',
+      github: 'https://github.com/ArnavSurana/CropDisease/tree/main/PLANTID-main',
       live: '#',
       year: '2025'
-    },
-    {
-      title: 'Competitive Programming Profile',
-      description: 'Active competitive programmer with 500+ problems solved across multiple platforms. Achieved significant rankings in global competitions and contests.',
-      tech: ['C++', 'Data Structures', 'Algorithms', 'Problem Solving'],
-      github: '#',
-      live: '#',
-      year: 'Ongoing'
     }
   ];
 
@@ -134,19 +126,17 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  <a href={project.github}>
                   <Button
                     variant="outline"
-                    className="border-amber-400/50 text-amber-400 hover:bg-amber-400/10 hover:border-amber-400 flex items-center gap-2 flex-1 transition-all duration-300 transform hover:scale-105"
+                    className="width-full border-amber-400/50 text-amber-400 hover:bg-amber-400/10 hover:border-amber-400 flex items-center gap-2 flex-1 transition-all duration-300 transform hover:scale-105"
                   >
                     <Github size={18} />
                     Code
                   </Button>
-                  <Button
-                    className="bg-gradient-to-r from-amber-400 to-yellow-500 text-black hover:from-amber-500 hover:to-yellow-600 flex items-center gap-2 flex-1 transition-all duration-300 shadow-lg shadow-amber-400/25 transform hover:scale-105"
-                  >
-                    <ExternalLink size={18} />
-                    Live Demo
-                  </Button>
+                  </a>
+                  
+                  
                 </div>
               </CardContent>
             </Card>

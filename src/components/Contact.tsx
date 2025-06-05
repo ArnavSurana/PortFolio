@@ -7,6 +7,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
 
+
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -34,15 +36,40 @@ const Contact = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch("https://formspree.io/f/xeokovoq", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      }),
     });
-    setFormData({ name: '', email: '', message: '' });
-  };
+
+    if (response.ok) {
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } else {
+      toast({
+        title: "Error",
+        description: "Failed to send your message. Please try again later.",
+      });
+    }
+  } catch (err) {
+    console.error(err);
+    toast({
+      title: "Error",
+      description: "Something went wrong. Try again later.",
+    });
+  }
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -76,14 +103,14 @@ const Contact = () => {
     {
       icon: Github,
       title: 'GitHub',
-      value: 'github.com/arnav-surana',
-      href: 'https://github.com/arnav-surana'
+      value: 'github.com/arnavsurana',
+      href: 'https://github.com/arnavsurana'
     },
     {
       icon: Linkedin,
       title: 'LinkedIn',
-      value: 'linkedin.com/in/arnav-surana',
-      href: 'https://linkedin.com/in/arnav-surana'
+      value: 'linkedin.com/in/arnavsurana',
+      href: 'https://linkedin.com/in/arnavsurana'
     }
   ];
 
