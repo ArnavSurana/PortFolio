@@ -10,15 +10,15 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Hi, I'm{' '}
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
-              Your Name
+              Arnav Surana
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-white/80 mb-8 leading-relaxed">
-            Full Stack Developer & Creative Problem Solver
+            Computer Science Engineering Student & Full Stack Developer
           </p>
           <p className="text-lg text-white/60 mb-12 max-w-2xl mx-auto">
-            I craft beautiful, functional, and user-centered digital experiences. 
-            Let's build something amazing together.
+            B.Tech CSE student at MANIT Bhopal with expertise in MERN Stack, AI/ML integration, 
+            and competitive programming. Winner of Smart India Hackathon 2024.
           </p>
         </div>
 
@@ -27,25 +27,29 @@ const Hero = () => {
             View My Work
           </Button>
           <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 py-3 rounded-full">
-            Download CV
+            Download Resume
           </Button>
         </div>
 
         <div className="flex justify-center space-x-6 mb-12">
           <a
-            href="#"
+            href="https://github.com/arnav-surana"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-white/60 hover:text-white transition-colors duration-300 transform hover:scale-110"
           >
             <Github size={28} />
           </a>
           <a
-            href="#"
+            href="https://linkedin.com/in/arnav-surana"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-white/60 hover:text-white transition-colors duration-300 transform hover:scale-110"
           >
             <Linkedin size={28} />
           </a>
           <a
-            href="#"
+            href="mailto:arnav.surana051175@gmail.com"
             className="text-white/60 hover:text-white transition-colors duration-300 transform hover:scale-110"
           >
             <Mail size={28} />

@@ -6,52 +6,40 @@ import { Button } from '@/components/ui/button';
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.',
+      title: 'ScholarBridge - RAG System',
+      description: 'A full-stack website implementing Retrieval-Augmented Generation (RAG) system for querying PDF books using natural language. Features Appwrite authentication, vector embeddings for semantic search, and LLM capabilities.',
       image: '/placeholder.svg',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      tech: ['Appwrite', 'PineCone', 'Python', 'React', 'JavaScript'],
       github: '#',
-      live: '#'
+      live: '#',
+      year: '2025'
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
+      title: 'Smart India Hackathon - SLIFTEX',
+      description: 'Frontend website for AI/ML model (PS-1782) to detect similarities between newspaper titles. Integrated LangChain for NLP-based similarity detection and won 1st place at SIH 2024.',
       image: '/placeholder.svg',
-      tech: ['Vue.js', 'Firebase', 'Socket.io', 'Tailwind'],
+      tech: ['React', 'LangChain', 'Vite', 'FastAPI', 'MongoDB'],
       github: '#',
-      live: '#'
+      live: '#',
+      year: 'Dec 2024'
     },
     {
-      title: 'Weather Dashboard',
-      description: 'A responsive weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics.',
+      title: 'Crop Disease Detection Platform',
+      description: 'MERN Stack website with AI/ML backend for crop disease detection. Features LangChain integration for image and symptom analysis, WebSocket communication for real-time updates.',
       image: '/placeholder.svg',
-      tech: ['React', 'API Integration', 'Charts.js', 'CSS Grid'],
+      tech: ['MongoDB', 'Express.js', 'React', 'Node.js', 'WebSockets'],
       github: '#',
-      live: '#'
+      live: '#',
+      year: '2025'
     },
     {
-      title: 'Portfolio Website',
-      description: 'A modern, responsive portfolio website with smooth animations, contact forms, and CMS integration for easy content management.',
+      title: 'Competitive Programming Profile',
+      description: 'Active competitive programmer with 500+ problems solved across multiple platforms. Achieved significant rankings in global competitions and contests.',
       image: '/placeholder.svg',
-      tech: ['Next.js', 'Framer Motion', 'Sanity CMS', 'Vercel'],
+      tech: ['C++', 'Data Structures', 'Algorithms', 'Problem Solving'],
       github: '#',
-      live: '#'
-    },
-    {
-      title: 'Social Media App',
-      description: 'A social media platform with real-time messaging, image sharing, and advanced privacy controls built with modern technologies.',
-      image: '/placeholder.svg',
-      tech: ['React Native', 'GraphQL', 'PostgreSQL', 'AWS'],
-      github: '#',
-      live: '#'
-    },
-    {
-      title: 'Learning Management System',
-      description: 'An educational platform with course management, progress tracking, and interactive learning modules for students and instructors.',
-      image: '/placeholder.svg',
-      tech: ['Angular', 'Express.js', 'MySQL', 'Video.js'],
-      github: '#',
-      live: '#'
+      live: '#',
+      year: 'Ongoing'
     }
   ];
 
@@ -63,18 +51,19 @@ const Projects = () => {
             My Projects
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            Here are some of the projects I've worked on. Each one represents a unique challenge 
-            and learning experience.
+            Here are some of the projects I've worked on, ranging from full-stack web applications 
+            to AI/ML integration and competitive programming achievements.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="bg-white/10 backdrop-blur-md border-white/20 overflow-hidden group hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
               <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-pink-500/20 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                  <span className="text-purple-300 text-sm">{project.year}</span>
                 </div>
               </div>
               
@@ -114,6 +103,32 @@ const Projects = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <Card className="bg-white/10 backdrop-blur-md border-white/20 max-w-4xl mx-auto">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold text-white mb-4">Technical Expertise</h3>
+              <div className="grid md:grid-cols-2 gap-6 text-left">
+                <div>
+                  <h4 className="text-lg font-semibold text-purple-300 mb-3">Programming Languages</h4>
+                  <p className="text-white/70">C/C++, JavaScript, Python, HTML, CSS</p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-purple-300 mb-3">Frameworks & Tools</h4>
+                  <p className="text-white/70">React.js, Node.js, Express.js, Vite, Postman</p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-purple-300 mb-3">Databases</h4>
+                  <p className="text-white/70">MongoDB, MySQL, Appwrite, MongoDB Atlas</p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-purple-300 mb-3">Areas of Interest</h4>
+                  <p className="text-white/70">Web Development, Competitive Programming, AI/ML</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

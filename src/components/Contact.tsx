@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -17,7 +17,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would integrate with Appwrite database
     console.log('Form submitted:', formData);
     toast({
       title: "Message sent!",
@@ -37,20 +36,35 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'hello@yourname.com',
-      href: 'mailto:hello@yourname.com'
+      value: 'arnav.surana051175@gmail.com',
+      href: 'mailto:arnav.surana051175@gmail.com'
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '+91-9399707667',
+      href: 'tel:+919399707667'
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'MANIT Bhopal, Madhya Pradesh',
       href: '#'
+    }
+  ];
+
+  const socialLinks = [
+    {
+      icon: Github,
+      title: 'GitHub',
+      value: 'github.com/arnav-surana',
+      href: 'https://github.com/arnav-surana'
+    },
+    {
+      icon: Linkedin,
+      title: 'LinkedIn',
+      value: 'linkedin.com/in/arnav-surana',
+      href: 'https://linkedin.com/in/arnav-surana'
     }
   ];
 
@@ -62,7 +76,8 @@ const Contact = () => {
             Get In Touch
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
+            Interested in collaborating on a project or discussing opportunities? 
+            I'd love to hear from you. Let's build something amazing together!
           </p>
         </div>
 
@@ -87,25 +102,46 @@ const Contact = () => {
               ))}
             </div>
 
+            <h3 className="text-2xl font-bold text-white mb-6">Connect With Me</h3>
+            <div className="space-y-4 mb-8">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.title}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-4 text-white/80 hover:text-white transition-colors duration-300 group"
+                >
+                  <div className="p-3 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/30 transition-colors duration-300">
+                    <link.icon size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">{link.title}</h4>
+                    <p className="text-white/60">{link.value}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+
             <Card className="bg-white/10 backdrop-blur-md border-white/20">
               <CardContent className="p-6">
                 <h4 className="text-xl font-bold text-white mb-4">Why Work With Me?</h4>
                 <ul className="space-y-3 text-white/70">
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                    <span>Dedicated to delivering high-quality solutions</span>
+                    <span>Strong academic background with 9.33 CGPA</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                    <span>Strong communication throughout the project</span>
+                    <span>Proven track record with SIH 2024 victory</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                    <span>On-time delivery and budget-conscious approach</span>
+                    <span>Full-stack development expertise</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                    <span>Post-launch support and maintenance</span>
+                    <span>Competitive programming skills and problem-solving</span>
                   </li>
                 </ul>
               </CardContent>
@@ -163,7 +199,7 @@ const Contact = () => {
 
         <div className="text-center mt-16 pt-8 border-t border-white/20">
           <p className="text-white/60">
-            © 2024 Your Name. Built with React and lots of ☕
+            © 2024 Arnav Surana. Built with React and passion for technology ⚡
           </p>
         </div>
       </div>
