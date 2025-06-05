@@ -80,7 +80,7 @@ const About = () => {
                   </div>
                   <div className="w-full bg-white/20 rounded-full h-2">
                     <div
-                      className="bg-gradient-to-r from-purple-400 to-pink-400 h-2 rounded-full transition-all duration-1000"
+                      className="bg-gradient-to-r from-gray-400 to-white h-2 rounded-full transition-all duration-1000"
                       style={{ width: `${skill.level}%` }}
                     ></div>
                   </div>
@@ -101,7 +101,7 @@ const About = () => {
           {features.map((feature) => (
             <Card key={feature.title} className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
               <CardContent className="p-6 text-center">
-                <feature.icon className="text-purple-400 mx-auto mb-4" size={48} />
+                <feature.icon className="text-gray-300 mx-auto mb-4" size={48} />
                 <h4 className="text-xl font-semibold text-white mb-2">{feature.title}</h4>
                 <p className="text-white/70">{feature.description}</p>
               </CardContent>

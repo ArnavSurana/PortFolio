@@ -91,7 +91,7 @@ const Contact = () => {
                   href={info.href}
                   className="flex items-center space-x-4 text-white/80 hover:text-white transition-colors duration-300 group"
                 >
-                  <div className="p-3 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/30 transition-colors duration-300">
+                  <div className="p-3 bg-gray-600/20 rounded-lg group-hover:bg-gray-600/30 transition-colors duration-300">
                     <info.icon size={24} />
                   </div>
                   <div>
@@ -112,7 +112,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="flex items-center space-x-4 text-white/80 hover:text-white transition-colors duration-300 group"
                 >
-                  <div className="p-3 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/30 transition-colors duration-300">
+                  <div className="p-3 bg-gray-600/20 rounded-lg group-hover:bg-gray-600/30 transition-colors duration-300">
                     <link.icon size={24} />
                   </div>
                   <div>
@@ -128,19 +128,19 @@ const Contact = () => {
                 <h4 className="text-xl font-bold text-white mb-4">Why Work With Me?</h4>
                 <ul className="space-y-3 text-white/70">
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
                     <span>Strong academic background with 9.33 CGPA</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
                     <span>Proven track record with SIH 2024 victory</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
                     <span>Full-stack development expertise</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
                     <span>Competitive programming skills and problem-solving</span>
                   </li>
                 </ul>
@@ -160,7 +160,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="bg-white/10 border-white/20 text-white placeholder-white/50 focus:border-purple-400"
+                    className="bg-white/10 border-white/20 text-white placeholder-white/50 focus:border-gray-400"
                   />
                 </div>
                 <div>
@@ -171,7 +171,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="bg-white/10 border-white/20 text-white placeholder-white/50 focus:border-purple-400"
+                    className="bg-white/10 border-white/20 text-white placeholder-white/50 focus:border-gray-400"
                   />
                 </div>
                 <div>
@@ -182,12 +182,12 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="bg-white/10 border-white/20 text-white placeholder-white/50 focus:border-purple-400 resize-none"
+                    className="bg-white/10 border-white/20 text-white placeholder-white/50 focus:border-gray-400 resize-none"
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105"
+                  className="w-full bg-white text-black hover:bg-gray-200 flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105"
                 >
                   <Send size={20} />
                   Send Message

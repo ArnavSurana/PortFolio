@@ -59,11 +59,11 @@ const Projects = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="bg-white/10 backdrop-blur-md border-white/20 overflow-hidden group hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-              <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-pink-500/20 relative overflow-hidden">
+              <div className="aspect-video bg-gradient-to-br from-gray-600/20 to-gray-800/20 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                  <span className="text-purple-300 text-sm">{project.year}</span>
+                  <span className="text-gray-300 text-sm">{project.year}</span>
                 </div>
               </div>
               
@@ -76,7 +76,7 @@ const Projects = () => {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm"
+                      className="px-3 py-1 bg-gray-600/20 text-gray-300 rounded-full text-sm"
                     >
                       {tech}
                     </span>
@@ -94,7 +94,7 @@ const Projects = () => {
                   </Button>
                   <Button
                     size="sm"
-                    className="bg-gradient-to-r from-purple-500 to-pink-500 text-white flex items-center gap-2"
+                    className="bg-white text-black hover:bg-gray-200 flex items-center gap-2"
                   >
                     <ExternalLink size={16} />
                     Live Demo
@@ -111,19 +111,19 @@ const Projects = () => {
               <h3 className="text-2xl font-bold text-white mb-4">Technical Expertise</h3>
               <div className="grid md:grid-cols-2 gap-6 text-left">
                 <div>
-                  <h4 className="text-lg font-semibold text-purple-300 mb-3">Programming Languages</h4>
+                  <h4 className="text-lg font-semibold text-gray-300 mb-3">Programming Languages</h4>
                   <p className="text-white/70">C/C++, JavaScript, Python, HTML, CSS</p>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-purple-300 mb-3">Frameworks & Tools</h4>
+                  <h4 className="text-lg font-semibold text-gray-300 mb-3">Frameworks & Tools</h4>
                   <p className="text-white/70">React.js, Node.js, Express.js, Vite, Postman</p>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-purple-300 mb-3">Databases</h4>
+                  <h4 className="text-lg font-semibold text-gray-300 mb-3">Databases</h4>
                   <p className="text-white/70">MongoDB, MySQL, Appwrite, MongoDB Atlas</p>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-purple-300 mb-3">Areas of Interest</h4>
+                  <h4 className="text-lg font-semibold text-gray-300 mb-3">Areas of Interest</h4>
                   <p className="text-white/70">Web Development, Competitive Programming, AI/ML</p>
                 </div>
               </div>

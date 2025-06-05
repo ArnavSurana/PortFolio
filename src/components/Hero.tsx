@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Hi, I'm{' '}
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-gray-300 to-white bg-clip-text text-transparent">
               Arnav Surana
             </span>
           </h1>
@@ -23,7 +23,7 @@ const Hero = () => {
         </div>
 
         <div className="animate-fade-in flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105">
+          <Button className="bg-white text-black hover:bg-gray-200 px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105">
             View My Work
           </Button>
           <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 py-3 rounded-full">
